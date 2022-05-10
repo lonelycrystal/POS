@@ -16,7 +16,7 @@ set bendings=6
 cls
 	echo The game is still in early alpha, so please don't be rude
 	echo and don't throw tomatoes into my window
-	echo AND, BEFORE PLAYING READ FUCKING RULES
+	echo AND, BEFORE PLAYING READ FUCKING RULES(readme.txt)
 	echo or i'll come to your house and eat all of your pancakes
 	ping -n 1 -w 500 192.168.254.254 >nul
 	echo 1. Start
@@ -30,7 +30,7 @@ cls
 	if %answer%==2 goto Credits
 	if %answer%==3 goto Exit
 	if %answer%==4 goto Secret_1
-	if %answer%==0 goto Stage_4
+	if %answer%==0 goto Stage_4Jaga
 
 :Exit
 cls
@@ -189,26 +189,30 @@ cls
 
 :Stage_4Mom
 cls
-echo 
-
-
+goto Beta
 
 
 :Stage_4Jaga
 cls
-echo You choose dance battle, huh
-ping -n 1 -w 1000 192.168.254.254 >nul
-echo Choose row of arrows(they represent your dance moves)
-ping -n 1 -w 1000 192.168.254.254 >nul
-echo Choose one answer:
-ping -n 1 -w 1000 192.168.254.254 >nul
-echo 1. 
-ping -n 1 -w 1000 192.168.254.254 >nul
-echo 2. 
-ping -n 1 -w 1000 192.168.254.254 >nul
-echo 3. 
-pause
-goto Menu
+	echo You choose dance battle, huh
+	call soundplay.bat "g.wav" 0
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo Choose row of arrows(they represent your dance moves)
+	call soundplay.bat "g.wav" 0
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo Choose one answer:
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo 1. left, right, down, up
+	call soundplay.bat "g.wav" 0
+	echo 2. up, down, right, left
+	call soundplay.bat "g.wav" 0
+	echo 3. down, right, up, left
+	call soundplay.bat "g.wav" 0
+	set /p answer=Choose one :
+	if %answer%==1 goto Beta
+	if %answer%==2 goto Beta
+	if %answer%==3 goto Beta
+
 
 
 
@@ -283,6 +287,7 @@ cls
 
 :DeathMeme
 cls
+	call soundplay.bat "e.wav" 0
 	echo You died like a hero
 	echo like Jotaro Kujo
 	echo or like Football ball
@@ -290,59 +295,58 @@ cls
 	echo or like Captain ZALUPA
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Bad ending 5/%bendings%
-	call soundplay.bat "e.wav" 0
 	pause
 	goto Menu
 	
 :DeathMeme2
 cls
+	call soundplay.bat "e.wav" 0
 	echo You have tried to throw shit like spider throws his webs (out of your ass)
 	echo Somehow you have killed remaining part of enemies, but...
 	ping -n 1 -w 3000 192.168.254.254 >nul 
 	echo You have died because of diarea. R.I.P
 	ping -n 1 -w 3000 192.168.254.254 >nul 
 	echo Bad ending 6/%bendings%
-	call soundplay.bat "e.wav" 0
 	pause
 	goto Menu
 
 :Death1
 cls
+	call soundplay.bat "e.wav" 0
 	echo You Died
 	echo Stupid American cheeseburger
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Bad ending 1/%bendings%
-	call soundplay.bat "e.wav" 0
 	pause
 	goto Menu
 
 :Death2
 cls
+	call soundplay.bat "e.wav" 0
 	echo You Died
 	echo Stupid American Hamburger
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Bad ending 2/%bendings%
-	call soundplay.bat "e.wav" 0
 	pause
 	goto Menu
 
 :Death3
 cls
+	call soundplay.bat "e.wav" 0
 	echo You Died
 	echo Stupid American burger
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Bad ending 3/%bendings%
-	call soundplay.bat "e.wav" 0
 	pause
 	goto Menu
 
 :Death4
 cls
+	call soundplay.bat "e.wav" 0
 	echo You Died
 	echo Stupid American McMuffin
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Bad ending 4/%bendings%
-	call soundplay.bat "e.wav" 0
 	pause
 	goto Menu
 

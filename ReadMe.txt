@@ -9,3 +9,7 @@ Sorry for my bad English
 It's foreign language for me and even i was studying it for almost 7 years, i still bad :c
 SOOOOOOO
 I do not wanna bother you more, so without further ado, LETS GET STARTED, SHALL WE!
+AND
+FOR GOD'S SAKE
+WAIT UNTIL ALL THE LINES GOT WRITTEN
+or there will be buuuuuugs
