@@ -3,7 +3,7 @@ title [Wierdiest game ever]
 color 0A
 if "%1" neq "" (goto %1)
 set gendings=1
-set bendings=6
+set bendings=7
 :Start
 	echo Knock, Knock, Neo.
 	call soundplay.bat "a.mp3" 0
@@ -30,7 +30,7 @@ cls
 	if %answer%==2 goto Credits
 	if %answer%==3 goto Exit
 	if %answer%==4 goto Secret_1
-	if %answer%==0 goto Stage_4Jaga
+	if %answer%==0 goto Stage_4
 
 :Exit
 cls
@@ -186,10 +186,24 @@ cls
 
 
 
-
 :Stage_4Mom
-cls
-goto Beta
+cls 
+	echo ... 
+	call soundplay.bat "ph.mp3" 0
+	ping -n 1 -w 300 192.168.254.254 >nul
+	echo ...
+	call soundplay.bat "ph.mp3" 0
+	ping -n 1 -w 300 192.168.254.254 >nul
+	echo ...
+	call soundplay.bat "ph.mp3" 0
+	ping -n 1 -w 300 192.168.254.254 >nul
+	echo Seems like there will be no answer...
+	ping -n 1 -w 3000 192.168.254.254 >nul
+	echo Goodbye cruel world...
+	ping -n 1 -w 2000 192.168.254.254 >nul	
+	pause
+goto Death5
+
 
 
 :Stage_4Jaga
@@ -220,27 +234,27 @@ cls
 :Stage_4ZaHando
 cls
 	echo You found that you have STANDO PAWAH
-	ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo ZA HANDO GA KESU!
 	call soundplay.bat "c.mp3" 0
 	echo You erased monkey with your power
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo What are you gonna do next?
-	ping -n 1 -w 3000 192.168.254.254 >nul
+	ping -n 1 -w 3500 192.168.254.254 >nul
 	echo Come on, nobody wants something else here
-	ping -n 1 -w 1000 192.168.254.254 >nul
+	ping -n 1 -w 2000 192.168.254.254 >nul
 	echo So, it's happy end
-	ping -n 1 -w 1000 192.168.254.254 >nul
+	ping -n 1 -w 2000 192.168.254.254 >nul
 	echo You have escaped, got your Stand. Saved your gir....
-	ping -n 1 -w 1000 192.168.254.254 >nul
+	ping -n 1 -w 2000 192.168.254.254 >nul
 	echo Sorry, wrong script
-	ping -n 1 -w 1000 192.168.254.254 >nul
+	ping -n 1 -w 2000 192.168.254.254 >nul
 	echo You come back to your gray life
-	ping -n 1 -w 1000 192.168.254.254 >nul
+	ping -n 1 -w 2000 192.168.254.254 >nul
 	echo Goodbye, gamer
 	ping -n 1 -w 5000 192.168.254.254 >nul
-	call soundplay.bat "d.mp3" 0
 	echo good ending 1/%gendings%
+	call soundplay.bat "d.mp3" 0
 	pause
 	goto Menu
 
@@ -300,9 +314,9 @@ cls
 	
 :DeathMeme2
 cls
-	call soundplay.bat "e.wav" 0
 	echo You have tried to throw shit like spider throws his webs (out of your ass)
 	echo Somehow you have killed remaining part of enemies, but...
+	call soundplay.bat "e.wav" 0
 	ping -n 1 -w 3000 192.168.254.254 >nul 
 	echo You have died because of diarea. R.I.P
 	ping -n 1 -w 3000 192.168.254.254 >nul 
@@ -350,7 +364,19 @@ cls
 	pause
 	goto Menu
 
+:Death5
+cls
 
+	echo Do you have last words?
+	ping -n 1 -w 5000 192.168.254.254 >nul	
+	echo Seems legit.
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	call soundplay.bat "e.wav" 0
+	echo You Died
+	ping -n 1 -w 4000 192.168.254.254 >nul
+	echo Bad ending 7/%bendings%
+	pause
+	goto Menu	
 
 
 
