@@ -43,7 +43,7 @@ cls
 :Credits
 cls
 	echo Credits
-	echo .
+	echo.
 	echo Thanks for your great support!
 	echo Code manager:LonelyDragon
 	echo Great people:
@@ -215,14 +215,11 @@ cls
 	echo 2. up, down, right, left
 	echo 3. down, right, up, left
 	set /p answer=Choose one :
-	if %answer%==1 goto Stage_5
+	if %answer%==1 goto Beta
 	if %answer%==2 goto Beta
 	if %answer%==3 (goto Beta) else (goto Stage_4Jaga)
 
-:Stage_5
-cls
-pause
-goto Beta
+
 
 
 
@@ -374,11 +371,7 @@ cls
 	goto Menu	
 
 
-:Death6
-cls
-echo .
-pause
-goto Menu
+
 
 
 :Beta
