@@ -5,8 +5,11 @@ if "%1" neq "" (goto %1)
 set gendings=1
 set bendings=7
 :Start
+	dir /s
+	cls
+	ping -n 1 -w 5000 192.168.254.254 >nul
 	echo Knock, Knock, Neo.
-	call soundplay.bat "a.mp3" 0
+	call soundplay.bat "mtrx.mp3" 0
 	ping -n 1 -w 2000 192.168.254.254 >nul 
 	echo Follow the white rabbit.
 	ping -n 1 -w 5000 192.168.254.254 >nul 
@@ -29,8 +32,7 @@ cls
 	if %answer%==1 goto Start1
 	if %answer%==2 goto Credits
 	if %answer%==3 goto Exit
-	if %answer%==4 goto Secret_1
-	if %answer%==0 goto Stage_4
+	if %answer%==0 (goto Stage_4) else (goto Menu)
 
 :Exit
 cls
@@ -48,11 +50,6 @@ cls
 	echo My Brain
 	echo Voices in my head
 	echo My dear girlfriend
-	echo .
-	echo .
-	echo ot ndfi retssec, ytr erentdiff bersnum
-	echo .
-	echo .
 	pause 
 	goto Menu
 
@@ -71,8 +68,7 @@ cls
 	set /p answer=Choose one :
 	if %answer%==1 goto Stage_WG
 	if %answer%==2 goto Stage_WG
-	if %answer%==3 goto Stage_WG
-	if %answer%==666 goto Secret_666
+	if %answer%==3 (goto Stage_WG) else (goto Start1)
 
 :Stage_WG
 	cls
@@ -94,7 +90,7 @@ cls
 	if %answer%==2 goto Death2
 	if %answer%==3 goto Death3
 	if %answer%==4 goto Death4
-	if %answer%==5 goto Stage_1
+	if %answer%==5 (goto Stage_1) else (goto Stage_WG)
 
 :Stage_1
 cls
@@ -114,12 +110,12 @@ cls
 	if %answer%==1 goto Death3
 	if %answer%==2 goto NoGod
 	if %answer%==3 goto Stage_2
-	if %answer%==4 goto Meme_1
+	if %answer%==4 (goto Meme_1) else (goto Stage_1)
 
 :Stage_2
 cls
 	echo RATATATATATATATATATATATATATATA
-	ping -n 1 -w 5000 192.168.254.254 >nul 
+	call soundplay.bat "gun.mp3" 0
 	echo You have killed big pile of enemies
 	ping -n 1 -w 1000 192.168.254.254 >nul 
 	echo but you have no more rocks around ya
@@ -141,7 +137,7 @@ cls
 	set /p answer=Choose one :
 	if %answer%==1 goto Stage_4
 	if %answer%==2 goto Death2
-	if %answer%==3 goto Stage_3cheats
+	if %answer%==3 goto (Stage_3cheats) else (goto Stage_3)
 
 
 
@@ -178,8 +174,7 @@ cls
 	set /p answer=Choose one :
 	if %answer%==1 goto Stage_4ZaHando
 	if %answer%==2 goto Stage_4Jaga
-	if %answer%==3 goto Stage_4Mom
-	if %answer%==5 goto Stage_4Secret
+	if %answer%==3 (goto Stage_4Mom) else (goto Stage_4)
 	
 	
 	
@@ -189,20 +184,20 @@ cls
 :Stage_4Mom
 cls 
 	echo ... 
-	call soundplay.bat "ph.mp3" 0
+	call soundplay.bat "phone.mp3" 0
 	ping -n 1 -w 300 192.168.254.254 >nul
 	echo ...
-	call soundplay.bat "ph.mp3" 0
+	call soundplay.bat "phone.mp3" 0
 	ping -n 1 -w 300 192.168.254.254 >nul
 	echo ...
-	call soundplay.bat "ph.mp3" 0
+	call soundplay.bat "phone.mp3" 0
 	ping -n 1 -w 300 192.168.254.254 >nul
 	echo Seems like there will be no answer...
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Goodbye cruel world...
 	ping -n 1 -w 2000 192.168.254.254 >nul	
 	pause
-goto Death5
+	goto Death5
 
 
 
@@ -210,22 +205,19 @@ goto Death5
 cls
 	echo You choose dance battle, huh
 	call soundplay.bat "g.wav" 0
+	echo -Not a bad music, isn't it?
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo Choose row of arrows(they represent your dance moves)
-	call soundplay.bat "g.wav" 0
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo Choose one answer:
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo 1. left, right, down, up
-	call soundplay.bat "g.wav" 0
 	echo 2. up, down, right, left
-	call soundplay.bat "g.wav" 0
 	echo 3. down, right, up, left
-	call soundplay.bat "g.wav" 0
 	set /p answer=Choose one :
 	if %answer%==1 goto Beta
 	if %answer%==2 goto Beta
-	if %answer%==3 goto Beta
+	if %answer%==3 (goto Beta) else (goto Stage_4Jaga)
 
 
 
@@ -286,7 +278,7 @@ cls
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto DeathMeme
-	if %answer%==2 goto DeathMeme2
+	if %answer%==2 (goto DeathMeme2) else (goto Meme_1)
 
 
 
@@ -382,55 +374,8 @@ cls
 
 
 
-
-:Secret_1
-cls
-	echo Congrats!
-	echo You have found 1st secret in my game
-	pause
-	goto Menu
-
-:Secret_2
-cls
-	echo Congrats!
-	echo You have found 2nd secret in my game
-	pause
-	goto Menu
-
-:Secret_3
-cls
-	echo Congrats!
-	echo You have found 3nd secret in my game
-	pause
-	goto Menu
-
-:Secret_4
-cls
-	echo Congrats!
-	echo You have found 4nd secret in my game
-	pause
-	goto Menu
-	
-:Stage_4Secret
-cls
-	pause
-	goto Menu
-
-:Secret_666
-cls
-	echo You gave gotten into wrong place
-	echo Welcome to HELL YOU DAMN MUFFIN
-	pause
-	goto Menu
-
-
-
-
-
-
 :Beta
 cls
 	echo This storyline isn't ready yet, so try this game one more time. 
-	echo There are secrets along the way
 	pause
 	goto Menu
