@@ -41,7 +41,7 @@ cls
 :Credits
 cls
 	echo Credits
-	echo.
+	echo .
 	echo Thanks for your great support!
 	echo Code manager:LonelyDragon
 	echo Great people:
@@ -223,11 +223,14 @@ cls
 	echo 3. down, right, up, left
 	call soundplay.bat "g.wav" 0
 	set /p answer=Choose one :
-	if %answer%==1 goto Beta
+	if %answer%==1 goto Stage_5
 	if %answer%==2 goto Beta
 	if %answer%==3 goto Beta
 
-
+:Stage_5
+cls
+pause
+goto Beta
 
 
 
@@ -379,7 +382,11 @@ cls
 	goto Menu	
 
 
-
+:Death6
+cls
+echo .
+pause
+goto Menu
 
 
 
