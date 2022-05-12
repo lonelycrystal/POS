@@ -55,7 +55,14 @@ cls
 
 :Start1
 cls
-	echo You're fucked. 
+echo Hello, Gamer
+echo -What the hell is this?
+echo My name is Entony and I will be your assistant in the "System"
+echo What do you wanna know about the "System"?
+	
+
+:Stage_Start
+echo You're fucked. 
 	echo There are lots of CHEBUREKS looking for your ass
 	echo You should look for escape
 	ping -n 1 -w 500 192.168.254.254 >nul
