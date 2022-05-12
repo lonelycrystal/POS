@@ -78,19 +78,22 @@ if %answer%==5 (goto Stage_Start) else (goto InfoChoice)
 :Info1
 cls
 echo The "System" is created to help
-echo the "player" to become strenghtest human
+echo the "Player" to become stronger
 
 echo The "Player" is someone, who gets bullied 
 echo by his surroundings
 pause
-goto Beta
+goto InfoChoice
 
 :Info2
 cls
-goto Beta
+echo Im Entony, your assistant
+echo Im gonna take care of you, your progress and your fails
+goto InfoChoice
 
 :Info3
 cls
+echo You became part of the "System"
 goto Beta
 
 :Info4
