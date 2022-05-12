@@ -9,3 +9,8 @@ Sorry for my bad English
 It's foreign language for me and even i was studying it for almost 7 years, i still bad :c
 SOOOOOOO
 I do not wanna bother you more, so without further ado, LETS GET STARTED, SHALL WE!
+
+A little explanation:
+Phrases after ”-" is said by main character
+Phrases in * * is mc's mind
+Phrases without symbols is Entony's speech
