@@ -59,7 +59,35 @@ echo Hello, Gamer
 echo -What the hell is this?
 echo My name is Entony and I will be your assistant in the "System"
 echo What do you wanna know about the "System"?
-	
+:InfoChoice
+cls
+echo 1. -What is the system
+echo 2. -Who are you?
+echo 3. -Who am i?
+echo 4. -What the fuck is this shit?
+echo 5. -Let's go further
+set /p answer=Choose one :
+if %answer%==1 goto Info1
+if %answer%==2 goto Info2
+if %answer%==3 goto Info3
+if %answer%==4 goto Info4
+if %answer%==5 (goto Stage_Start) else (goto InfoChoice)
+
+:Info1
+cls
+goto Beta
+
+:Info2
+cls
+goto Beta
+
+:Info3
+cls
+goto Beta
+
+:Info4
+cls
+goto Beta
 
 :Stage_Start
 echo You're fucked. 
