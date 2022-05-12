@@ -59,6 +59,8 @@ echo Hello, Gamer
 echo -What the hell is this?
 echo My name is Entony and I will be your assistant in the "System"
 echo What do you wanna know about the "System"?
+pause
+
 :InfoChoice
 cls
 echo 1. -What is the system
@@ -75,6 +77,12 @@ if %answer%==5 (goto Stage_Start) else (goto InfoChoice)
 
 :Info1
 cls
+echo The "System" is created to help
+echo the "player" to become strenghtest human
+
+echo The "Player" is someone, who gets bullied 
+echo by his surroundings
+pause
 goto Beta
 
 :Info2
