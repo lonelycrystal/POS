@@ -93,7 +93,9 @@ goto InfoChoice
 
 :Info3
 cls
+echo --PERSONAL DATA CORRUPTED--
 echo You became part of the "System"
+echo The "System" will help you to retain your memories
 goto Beta
 
 :Info4
