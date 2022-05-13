@@ -58,6 +58,7 @@ cls
 echo Hello, Gamer
 echo -What the hell is this?
 echo My name is Entony and I will be your assistant in the "System"
+echo -The fuck is this?
 echo What do you wanna know about the "System"?
 pause
 
@@ -103,7 +104,14 @@ cls
 goto Beta
 
 :Stage_Start
-echo You're fucked. 
+cls
+echo --INITIALISING TRANSFER--
+echo -WHAAAAT, WHERE ARE WE GOING???
+echo Sir, we are going into good place for start.
+echo --TRANSFER ERROR--
+echo -And WHAT THE FUCK IS THIS?
+echo --TRANSFERING TO THE NEAREST LOCATION--
+
 	echo There are lots of CHEBUREKS looking for your ass
 	echo You should look for escape
 	ping -n 1 -w 500 192.168.254.254 >nul
