@@ -55,19 +55,28 @@ cls
 
 :Start1
 cls
-echo Hello, Gamer
-echo -What the hell is this?
-echo My name is Entony and I will be your assistant in the "System"
-echo -The fuck is this?
-echo What do you wanna know about the "System"?
-pause
+	echo Hello, Gamer
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo -What the hell is this?
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo My name is Entony and I will be your assistant in the "System"
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo -The fuck is this?
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo What do you wanna know about the "System"?
+	ping -n 1 -w 500 192.168.254.254 >nul
+	pause
 
 :InfoChoice
 cls
 echo 1. -What is the system
+ping -n 1 -w 500 192.168.254.254 >nul
 echo 2. -Who are you?
+ping -n 1 -w 500 192.168.254.254 >nul
 echo 3. -Who am i?
+ping -n 1 -w 500 192.168.254.254 >nul
 echo 4. -What the fuck is this shit?
+ping -n 1 -w 500 192.168.254.254 >nul
 echo 5. -Let's go further
 set /p answer=Choose one :
 if %answer%==1 goto Info1
@@ -79,38 +88,56 @@ if %answer%==5 (goto Stage_Start) else (goto InfoChoice)
 :Info1
 cls
 echo The "System" is created to help
-echo the "Player" to become stronger
-
+echo the "Player" to retain memories
+ping -n 1 -w 500 192.168.254.254 >nul
 echo The "Player" is someone, who gets bullied 
-echo by his surroundings
+echo by his surroundings, gets broken and looses his memories
 pause
 goto InfoChoice
 
 :Info2
 cls
 echo Im Entony, your assistant
+ping -n 1 -w 500 192.168.254.254 >nul
 echo Im gonna take care of you, your progress and your fails
+pause
 goto InfoChoice
 
 :Info3
 cls
 echo --PERSONAL DATA CORRUPTED--
 echo You became part of the "System"
+ping -n 1 -w 500 192.168.254.254 >nul
 echo The "System" will help you to retain your memories
-goto Beta
+pause
+goto InfoChoice
 
 :Info4
 cls
-goto Beta
+echo there is no command "What the fuck is this shit?"
+goto InfoChoice
 
 :Stage_Start
 cls
-echo --INITIALISING TRANSFER--
-echo -WHAAAAT, WHERE ARE WE GOING???
-echo Sir, we are going into good place for start.
-echo --TRANSFER ERROR--
-echo -And WHAT THE FUCK IS THIS?
-echo --TRANSFERING TO THE NEAREST LOCATION--
+	echo --INITIALISING TRANSFER--
+		ping -n 1 -w 500 192.168.254.254 >nul
+	echo -WHAAAAT, WHERE ARE WE GOING???
+		ping -n 1 -w 500 192.168.254.254 >nul
+	echo Sir, we are going into good place for start.
+		ping -n 1 -w 500 192.168.254.254 >nul
+	echo .
+		ping -n 1 -w 500 192.168.254.254 >nul
+	echo .
+		ping -n 1 -w 500 192.168.254.254 >nul
+	echo .
+		ping -n 1 -w 500 192.168.254.254 >nul
+	echo --TRANSFER ERROR--
+		ping -n 1 -w 500 192.168.254.254 >nul
+	echo -And WHAT THE FUCK IS THIS?
+		ping -n 1 -w 500 192.168.254.254 >nul
+	echo --TRANSFERING TO THE NEAREST LOCATION--
+		ping -n 1 -w 500 192.168.254.254 >nul
+	echo -Oh god, please no
 
 	echo There are lots of CHEBUREKS looking for your ass
 	echo You should look for escape
