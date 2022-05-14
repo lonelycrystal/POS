@@ -8,8 +8,11 @@ set bendings=7
 	dir /s
 	cls
 	ping -n 1 -w 5000 192.168.254.254 >nul
-	echo Knock, Knock, Neo.
+	echo Kвапck, Kввпck, Neа. 
 	call soundplay.bat "mtrx.mp3" 0
+	cls
+	echo Knock knock, Neo.
+	echo.
 	ping -n 1 -w 2000 192.168.254.254 >nul 
 	echo Follow the white rabbit.
 	ping -n 1 -w 5000 192.168.254.254 >nul 
@@ -17,9 +20,11 @@ set bendings=7
 
 :Menu
 cls
-	echo The game is still in early alpha, so please don't be rude
+	echo The game is still in early alpha-beta, so please don't be rude
 	echo and don't throw tomatoes into my window
+	ping -n 1 -w 1000 192.168.254.254 >nul 
 	echo AND, BEFORE PLAYING READ FUCKING RULES(readme.txt)
+	ping -n 1 -w 2500 192.168.254.254 >nul 
 	echo or i'll come to your house and eat all of your pancakes
 	ping -n 1 -w 100 192.168.254.254 >nul
 	echo 1. Start
@@ -32,7 +37,7 @@ cls
 	if %answer%==1 goto Start1
 	if %answer%==2 goto Credits
 	if %answer%==3 goto Exit
-	if %answer%==0 (goto Stage_4) else (goto Menu)
+	if %answer%==0 (goto Stage_WG) else (goto Menu)
 
 
 :Credits
@@ -58,8 +63,9 @@ cls
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo -The fuck is this?
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo What do you wanna know about the "System"?
+	echo You want to know about the "System"?
 	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo -Oh, come on, do you need my approvement?
 	pause
 
 :InfoChoice
@@ -139,6 +145,7 @@ cls
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	pause
 cls
+	call soundplay.bat "Error.wav" 0
 	echo ---VOICE MODULE ERROR---
 	ping -n 1 -w 500 192.168.254.254 >nul
 	echo -The fuck is wrong with this world??
@@ -158,13 +165,18 @@ cls
 	pause
 cls
 	echo There are lots of CHEBUREKS looking for your ass
-	echo You should look for escape
+	ping -n 1 -w 500 192.168.254.254 >nul	
+	echo -Seems like this voice module is more interesting
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 1. Rock
+	echo You should look for escape, you damn muffin
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 2. Paper
+	echo -Ok, maybe it's not that good
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 3. Scissors
+	echo 1. -I will go with the Rock
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo 2. -I will go with Paper
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo 3. -I will go with Scissors
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Stage_WG
@@ -174,17 +186,22 @@ cls
 :Stage_WG
 cls
 	echo Are you playing that damn game or something?
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo -Dude, maybe you will be less angry?
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo IM GIVING COMMANDS HERE, YOU LITTLE USELESS PIECE OF SHIT
+	ping -n 1 -w 500 192.168.254.254 >nul
 	echo You are fucked anyway, so take this:
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 1. Knife
+	echo 1. -Knife *Kid choice*
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 2. Sword
+	echo 2. -Sword *You are from Katana Zero, or something?*
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 3. Sword and shield
+	echo 3. -Sword and shield *Better, but still not enough*
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 4. Gun
+	echo 4. -Little gun *Great choice to kill, but little*
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 5. AK-47 SUKA BLYAT
+	echo 5. -AK-47 SUKA BLYAT *Chad choice*
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Death1
@@ -227,8 +244,8 @@ cls
 
 :Stage_3
 cls
-	echo You have found an dark alley
-	ping -n 1 -w 500 192.168.254.254 >nul
+	echo You have found a dark alley
+	ping -n 1 -w 500 192.168.254.254 >nul 
 	echo 1. Go there
 	ping -n 1 -w 500 192.168.254.254 >nul
 	echo 2. Stay
@@ -238,23 +255,7 @@ cls
 	set /p answer=Choose one :
 	if %answer%==1 goto Stage_4
 	if %answer%==2 goto Death2
-	if %answer%==3 goto (Stage_3cheats) else (goto Stage_3)
-
-
-
-:Stage_3cheats
-cls
-	echo You have grown up!
-	call soundplay.bat "b.mp3" 0
-	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo BUT YOU ARE DOOMED, CHEATER.
-	ping -n 1 -w 2000 192.168.254.254 >nul
-	goto Death3
-
-
-
-
-
+	if %answer%==3 (goto Death3) else (goto Stage_3)
 
 
 
@@ -423,6 +424,12 @@ cls
 	goto Menu
 
 :Death3
+cls
+	echo You have grown up!
+	call soundplay.bat "b.mp3" 0
+	ping -n 1 -w 2000 192.168.254.254 >nul
+	echo BUT YOU ARE DOOMED, CHEATER.
+	ping -n 1 -w 2000 192.168.254.254 >nul
 cls
 	call soundplay.bat "e.wav" 0
 	echo You Died
