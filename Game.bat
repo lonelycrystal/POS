@@ -21,24 +21,19 @@ cls
 	echo and don't throw tomatoes into my window
 	echo AND, BEFORE PLAYING READ FUCKING RULES(readme.txt)
 	echo or i'll come to your house and eat all of your pancakes
-	ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 100 192.168.254.254 >nul
 	echo 1. Start
-	ping -n 1 -w 500 192.168.254.254 >nul 
+	ping -n 1 -w 100 192.168.254.254 >nul 
 	echo 2. Credits
-	ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 100 192.168.254.254 >nul
 	echo 3. Exit
-	ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 100 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Start1
 	if %answer%==2 goto Credits
 	if %answer%==3 goto Exit
 	if %answer%==0 (goto Stage_4) else (goto Menu)
 
-:Exit
-cls
-	echo Thanks for playing!
-	pause
-	exit /b
 
 :Credits
 cls
@@ -56,89 +51,112 @@ cls
 :Start1
 cls
 	echo Hello, Gamer
-	ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo -What the hell is this?
-	ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo My name is Entony and I will be your assistant in the "System"
-	ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo -The fuck is this?
-	ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo What do you wanna know about the "System"?
-	ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1000 192.168.254.254 >nul
 	pause
 
 :InfoChoice
 cls
-echo 1. -What is the system
-ping -n 1 -w 500 192.168.254.254 >nul
-echo 2. -Who are you?
-ping -n 1 -w 500 192.168.254.254 >nul
-echo 3. -Who am i?
-ping -n 1 -w 500 192.168.254.254 >nul
-echo 4. -What the fuck is this shit?
-ping -n 1 -w 500 192.168.254.254 >nul
-echo 5. -Let's go further
-set /p answer=Choose one :
-if %answer%==1 goto Info1
-if %answer%==2 goto Info2
-if %answer%==3 goto Info3
-if %answer%==4 goto Info4
-if %answer%==5 (goto Stage_Start) else (goto InfoChoice)
+	echo 1. -What is the system
+	ping -n 1 -w 100 192.168.254.254 >nul
+	echo 2. -Who are you?
+	ping -n 1 -w 100 192.168.254.254 >nul
+	echo 3. -Who am i?
+	ping -n 1 -w 100 192.168.254.254 >nul
+	echo 4. -What the fuck is this shit?
+	ping -n 1 -w 100 192.168.254.254 >nul
+	echo 5. -Let's go further	
+	ping -n 1 -w 100 192.168.254.254 >nul
+	set /p answer=Choose one :
+	if %answer%==1 goto Info1
+	if %answer%==2 goto Info2
+	if %answer%==3 goto Info3
+	if %answer%==4 goto Info4
+	if %answer%==5 (goto Stage_Start) else (goto InfoChoice)
 
 :Info1
-cls
-echo The "System" is created to help
-echo the "Player" to retain memories
-ping -n 1 -w 500 192.168.254.254 >nul
-echo The "Player" is someone, who gets bullied 
-echo by his surroundings, gets broken and looses his memories
-pause
-goto InfoChoice
+	cls
+	echo The "System" is created to help the "Player" to retain memories
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo The "Player" is someone, who gets bullied by his surroundings, gets broken and
+	echo looses his memories
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	pause
+	goto InfoChoice
 
 :Info2
-cls
-echo Im Entony, your assistant
-ping -n 1 -w 500 192.168.254.254 >nul
-echo Im gonna take care of you, your progress and your fails
-pause
-goto InfoChoice
+	cls
+	echo Im Entony, your assistant
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo Im gonna take care of you, your progress and your fails
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	pause
+	goto InfoChoice
 
 :Info3
-cls
-echo --PERSONAL DATA CORRUPTED--
-echo You became part of the "System"
-ping -n 1 -w 500 192.168.254.254 >nul
-echo The "System" will help you to retain your memories
-pause
-goto InfoChoice
+	cls
+	echo ---PERSONAL DATA CORRUPTED---
+	ping -n 1 -w 1000 192.168.254.254 >nul	
+	pause
+	goto InfoChoice
 
 :Info4
-cls
-echo there is no command "What the fuck is this shit?"
-goto InfoChoice
+	cls
+	echo There is no command "What the fuck is this shit?"
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	pause
+	goto InfoChoice
 
 :Stage_Start
 cls
-	echo --INITIALISING TRANSFER--
-		ping -n 1 -w 500 192.168.254.254 >nul
+	echo ---INITIALISING TRANSFER---
+	ping -n 1 -w 500 192.168.254.254 >nul
 	echo -WHAAAAT, WHERE ARE WE GOING???
-		ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo Sir, we are going into good place for start.
-		ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo .
-		ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo .
-		ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo .
-		ping -n 1 -w 500 192.168.254.254 >nul
-	echo --TRANSFER ERROR--
-		ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	call soundplay.bat "Error.wav" 0
+	echo ---TRANSFER ERROR---
+	ping -n 1 -w 500 192.168.254.254 >nul
 	echo -And WHAT THE FUCK IS THIS?
-		ping -n 1 -w 500 192.168.254.254 >nul
-	echo --TRANSFERING TO THE NEAREST LOCATION--
-		ping -n 1 -w 500 192.168.254.254 >nul
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo ---TRANSFERING TO THE NEAREST LOCATION---
+	ping -n 1 -w 500 192.168.254.254 >nul
 	echo -Oh god, please no
-
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	pause
+cls
+	echo ---VOICE MODULE ERROR---
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo -The fuck is wrong with this world??
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo ---SWITCHING TO THE EXTERNAL SOURCE---
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo .
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo .
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo .
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo ---SWITCHING DONE---
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo -I hope this "EXTERNAL SOURCE" will be good enough...
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	pause
+cls
 	echo There are lots of CHEBUREKS looking for your ass
 	echo You should look for escape
 	ping -n 1 -w 500 192.168.254.254 >nul
@@ -154,7 +172,7 @@ cls
 	if %answer%==3 (goto Stage_WG) else (goto Start1)
 
 :Stage_WG
-	cls
+cls
 	echo Are you playing that damn game or something?
 	echo You are fucked anyway, so take this:
 	ping -n 1 -w 500 192.168.254.254 >nul
@@ -337,18 +355,6 @@ cls
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 :Meme_1
 cls
 	echo You stupid bastard
@@ -362,9 +368,6 @@ cls
 	set /p answer=Choose one :
 	if %answer%==1 goto DeathMeme
 	if %answer%==2 (goto DeathMeme2) else (goto Meme_1)
-
-
-
 
 
 :NoGod
@@ -462,3 +465,9 @@ cls
 	echo This storyline isn't ready yet, so try this game one more time. 
 	pause
 	goto Menu
+
+:Exit
+cls
+	echo Thanks for playing!
+	pause
+	exit /b
