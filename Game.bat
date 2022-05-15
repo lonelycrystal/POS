@@ -102,44 +102,45 @@ cls
 
 :Info1
 	cls
-	echo The "System" is created to help the "Player" to retain memories
+	echo "‘¨áâ¥¬ " á®§¤ ­  ¤«ï â®£®, çâ®¡ë ¯®¬®çì "ˆ£à®ªã" ¯®«ãç¨âì ãâà ç¥­­ë¥ ¢®á¯®¬¨­ ­¨ï
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo The "Player" is someone, who gets bullied by his surroundings, gets broken and
-	echo looses his memories
+	echo "ˆ£à®ª" íâ®â â®â, ­ ¤ ª®â®àë¬ ¨§¤¥¢ «®áì ¥£® ®ªàã¦¥­¨¥, ¯®áâ¥¯¥­­® «®¬ «¨ ¥£® à §ã¬, çâ® ¯à¨¢¥«® ª ¯®â¥à¥ ¯ ¬ïâ¨
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	pause
 	goto InfoChoice
 
 :Info2
 	cls
-	echo Im Entony, your assistant
+	echo Œ¥­ï §®¢ãâ ­â®­¨, ï ¢ è ¯®¬®é­¨ª
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo Im gonna take care of you, your progress and your fails
+	echo Ÿ ¯®§ ¡®çãáì ® ¢ á, ¢ è¨å ¤®áâ¨¦¥­¨ïå ¨ ¯ ¤¥­¨ïå
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	pause
 	goto InfoChoice
 
 :Info3
 	cls
-	echo ---PERSONAL DATA CORRUPTED---
+	echo ---‹¨ç­ë¥ ¤ ­­ë¥ ¯®¢à¥¦¤¥­ë---
+	ping -n 1 -w 1000 192.168.254.254 >nul	
+	echo -«ïâì, ¤ã¬ « å®âì çâ®-â® ¯à® á¥¡ï ¢á¯®¬­î
 	ping -n 1 -w 1000 192.168.254.254 >nul	
 	pause
 	goto InfoChoice
 
 :Info4
 	cls
-	echo There is no command "What the fuck is this shit?"
+	echo à®èã ¯à®é¥­¨ï, ­® ­¥â â ª®© ª®¬ ­¤ë "—â® §  åã©­ï âãâ ¯à®¨áå®¤¨â?"
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	pause
 	goto InfoChoice
 
 :Stage_Start
 cls
-	echo ---INITIALISING TRANSFER---
+	echo ---ˆˆ–ˆ€‹ˆ‡ˆ“ž ……Œ…™…ˆ…---
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo -WHAAAAT, WHERE ARE WE GOING???
+	echo -—…ƒŽ ‹Ÿ’œ??? Š“„€ Œ›, €•…, Ž’€‚‹Ÿ…Œ‘Ÿ???
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo Sir, we are going into good place for start.
+	echo ‘íà, ¬ë ®â¯à ¢«ï¥¬áï ¢ «ãçè¥¥ ¬¥áâ® ¤«ï ­ ç «  ¯à®æ¥áá  ¢®ááâ ­®¢«¥­¨ï.
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo .
 	ping -n 1 -w 1500 192.168.254.254 >nul
@@ -148,48 +149,48 @@ cls
 	echo .
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	call soundplay.bat "Error.wav" 0
-	echo ---TRANSFER ERROR---
+	echo ---Ž˜ˆŠ€ ……Œ…™…ˆŸ---
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo -And WHAT THE FUCK IS THIS?
+	echo -ˆ —’Ž ’Ž ‹Ÿ’œ ‡€ •…Ÿ?
 	ping -n 1 -w 1500 192.168.254.254 >nul
-	echo ---TRANSFERING TO THE NEAREST LOCATION---
+	echo ---……ŒŒ…™…ˆ… ‚ ‹ˆ†€ž˜“ž ’Ž—Š“---
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo -Oh god, please no
+	echo -®¦¥ ¬®©, ­¥â
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	pause
 cls
 	call soundplay.bat "Error.wav" 0
-	echo ---VOICE MODULE ERROR---
+	echo ---Ž˜ˆŠ€ ƒŽ‹Ž‘Ž‚ŽƒŽ ŒŽ„“‹Ÿ---
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo -The fuck is wrong with this world??
+	echo -—â® §  åã©­ï á íâ¨¬ ¬¥áâ®¬?
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo ---SWITCHING TO THE EXTERNAL SOURCE---
-	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo .
+	echo ---……Š‹ž—…ˆ… € ‡€€‘Ž‰ ƒŽ‹Ž‘Ž‚Ž‰ ŒŽ„“‹œ---
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo .
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo .
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo ---SWITCHING DONE---
+	echo .
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo ---……Š‹ž—…ˆ… ‡€‚…˜…Ž---
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo -I hope this "EXTERNAL SOURCE" will be good enough...
+	echo - ¤¥îáì íâ®â "‡€€‘Ž‰ ƒŽ‹Ž‘Ž‚Ž‰ ŒŽ„“‹œ" ¡ã¤¥â ¤®áâ â®ç­® å®à®è¨¬...
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	pause
 cls
-	echo There are lots of CHEBUREKS looking for your ass
+	echo ‚®ªàã£ â¥¡ï ªãçã ¯¨¤®à á®¢
 	ping -n 1 -w 500 192.168.254.254 >nul	
-	echo -Seems like this voice module is more interesting
+	echo -‚¨¤¨¬®, íâ®â ¬®¤ã«ì ¡®«¥¥ ¨­â¥à¥á­ë©
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo You should look for escape, you damn muffin
+	echo ˆé¨ ¢ëå®¤, ç¥àâ®¢ ªãá®ª ¤¥àì¬ 
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo -Ok, maybe it's not that good
+	echo -Žª¥©, ¬®¦¥â ®­ ­¥ â ª å®à®è
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 1. -I will go with the Rock
+	echo 1. -Š ¬¥­ì!
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 2. -I will go with Paper
+	echo 2. -ã¬ £ !
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 3. -I will go with Scissors
+	echo 3. -®¦­¨æë!
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Stage_WG
@@ -198,23 +199,23 @@ cls
 
 :Stage_WG
 cls
-	echo Are you playing that damn game or something?
+	echo ’ë à¥è¨« ¢ íâã ¨£àã ¯®¨£à âì?
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo -Dude, maybe you will be less angry?
+	echo -—ã¢ ª, ¬®¦¥â ¡ã¤¥èì ¬¥­¥¥  £à¥áá¨¢­ë¬?
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo IM GIVING COMMANDS HERE, YOU LITTLE USELESS PIECE OF SHIT
+	echo Ÿ ’“’ €‡„€ž ŠŽŒ€„›, ’›, Š“‘ŽŠ „…œŒ€
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo You are fucked anyway, so take this:
+	echo ’¥¡¥ ¯¨§¤  ¢ «î¡®¬ á«ãç ¥, â ª çâ® ¢®§ì¬¨ íâ®:
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 1. -Knife *Kid choice*
+	echo 1. -®¦ *‚ë¡®à à¥¡¥­ª *
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 2. -Sword *You are from Katana Zero, or something?*
+	echo 2. -Œ¥ç *«ïâì, ï ¨§ Katana Zero, ¨«¨ çâ®?*
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 3. -Sword and shield *Better, but still not enough*
+	echo 3. -Œ¥ç ¨ é¨â *Œë, ¢à®¤¥, ­¥ ¢ áà¥¤­¥¢¥ª®¢ì¥, ­ã ¤  « ¤­®*
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 4. -Little gun *Great choice to kill, but little*
+	echo 4. -¨áâ®«¥â *•®à®è¨© ¢ë¡®à ¤«ï ã¡¨©áâ¢, ­® ¬ «®¢ â*
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 5. -AK-47 SUKA BLYAT *Chad choice*
+	echo 5. -€Š-47 ‘“Š€ ‹Ÿ’œ *‚›Ž €‘’ŽŸ™ˆ• Œ“†ˆŠŽ‚*
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Death1
@@ -225,17 +226,17 @@ cls
 
 :Stage_1
 cls
-	echo You feel yourself incredibly strong with this gun
-	echo But you forgot to take bullets for your AK-47 SUKA BLYAT
-	echo How you're gonna shoot?
+	echo *Ÿ çã¢áâ¢ãî ­¥¢¥à®ïâ­ãî á¨«ã, ¤¥à¦  ¢ àãª å íâ® ®àã¦¨¥*
+	echo *«ïâì,   ¯ âà®­ë?*
+	echo ˆ™ˆ €’Ž› ‘€Œ, ‚ ŠŽŒ‹…Š’… Žˆ … ˆ„“’!
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 1. With your fingers
+	echo 1. ˆá¯®«ì§ã© ¯ «ìæë
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 2. With god's help
+	echo 2. ‘ ¡®£®¬!
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 3. Use rocks as bullets
+	echo 3. ˆá¯®«ì§ã© ª ¬­¨ ª ª ¯ã«¨
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 4. Use your shit just like monkeys
+	echo 4. ã¤¥¬ ª¨¤ âì £®¢­®¬ ª ª ®¡¥§ìï­ë
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Death3
@@ -245,25 +246,25 @@ cls
 
 :Stage_2
 cls
-	echo RATATATATATATATATATATATATATATA
+	echo €’€’€’€’€’€’€’€’€’€’€’€’€’€’€’€’€’€
 	call soundplay.bat "gun.mp3" 0
-	echo You have killed big pile of enemies
+	echo *¥¯«®å®, ¡®«ìè ï ç áâì ¯®«¥£« *
 	ping -n 1 -w 1000 192.168.254.254 >nul 
-	echo but you have no more rocks around ya
+	echo -«ïâì, ª ¬­¨ § ª®­ç¨«¨áì
 	ping -n 1 -w 1000 192.168.254.254 >nul 
-	echo They are getting close to you
+	echo *‘ãª , ®­¨ ¯à¨¡«¨¦ îâáï*
 	ping -n 1 -w 5000 192.168.254.254 >nul 
 	goto Stage_3
 
 :Stage_3
 cls
-	echo You have found a dark alley
+	echo *Žâ«¨ç­®¥ ­ ç «® å®àà®à -â¥¬­ë© ¯¥à¥ã«®ª*
 	ping -n 1 -w 500 192.168.254.254 >nul 
-	echo 1. Go there
+	echo 1. -®åã©, ¯®£­ «¨
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 2. Stay
+	echo 2. -Žáâ ­ãáì âãâ, ¯®¯à®¡ãî çâ®-­¨¡ã¤ì ¯à¨¤ã¬ âì
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 3. Up, Up, Down, Down, Left, Right, Left, Right, A, B.
+	echo 3. *Up, Up, Down, Down, Left, Right, Left, Right, A, B.*
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Stage_4
@@ -274,7 +275,7 @@ cls
 
 :Stage_4
 cls
-	echo THERE IS A SCREAMING MONKEY WITH CYMBALS
+	echo *Š€ŠŽƒŽ •“Ÿ ’“’ Ž…‡œŸ€ ‘ ’€…‹Š€Œˆ?*
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo You have no more bullets under your feet
 	ping -n 1 -w 500 192.168.254.254 >nul
