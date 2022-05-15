@@ -8,77 +8,90 @@ set bendings=7
 	dir /s
 	cls
 	ping -n 1 -w 5000 192.168.254.254 >nul
-	echo K╨▓╨░╨┐ck, K╨▓╨▓╨┐ck, Ne╨░. 
+	echo W╨▓╨░╨┐ke u▓╨┐p, Ne╨░...
 	call soundplay.bat "mtrx.mp3" 0
 	cls
-	echo Knock knock, Neo.
-	echo.
-	ping -n 1 -w 2000 192.168.254.254 >nul 
+	echo Wake up, Neo...
+	ping -n 1 -w 5000 192.168.254.254 >nul
+	cls
+	ping -n 1 -w 5000 192.168.254.254 >nul
+	echo The matrix has you.
+	ping -n 1 -w 5000 192.168.254.254 >nul 
+	cls
+	ping -n 1 -w 5000 192.168.254.254 >nul
 	echo Follow the white rabbit.
 	ping -n 1 -w 5000 192.168.254.254 >nul 
+	cls
+	ping -n 1 -w 5000 192.168.254.254 >nul
+	echo Knock, knock, Neo...
+	ping -n 1 -w 5000 192.168.254.254 >nul 
+	cls
+	ping -n 1 -w 2000 192.168.254.254 >nul
+	dir /s
 	goto Menu
 
 :Menu
 cls
-	echo The game is still in early alpha-beta, so please don't be rude
-	echo and don't throw tomatoes into my window
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo Игра до сих пор находится на стадии Альфа-Бета, так что будьте снисходительнее
+	echo и не кидайтесь помидорами в мои окна
 	ping -n 1 -w 1000 192.168.254.254 >nul 
-	echo AND, BEFORE PLAYING READ FUCKING RULES(readme.txt)
+	echo И ПРЕЖДЕ ЧЕМ ИГРАТЬ, ПРОЧИТАЙТЕ ПРАВИЛА!
 	ping -n 1 -w 2500 192.168.254.254 >nul 
-	echo or i'll come to your house and eat all of your pancakes
+	echo или я приду к вам в дом и съем все ваши блинчики
 	ping -n 1 -w 100 192.168.254.254 >nul
-	echo 1. Start
+	echo 1. Играть
 	ping -n 1 -w 100 192.168.254.254 >nul 
-	echo 2. Credits
+	echo 2. Создатели
 	ping -n 1 -w 100 192.168.254.254 >nul
-	echo 3. Exit
+	echo 3. Выход
 	ping -n 1 -w 100 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Start1
-	if %answer%==2 goto Credits
-	if %answer%==3 goto Exit
+	if %answer%==2 goto Start2
+	if %answer%==3 goto Start3
 	if %answer%==0 (goto Stage_WG) else (goto Menu)
 
 
-:Credits
+:Start2
 cls
-	echo Credits
+	echo Создатели
 	echo.
-	echo Thanks for your great support!
-	echo Code manager:LonelyDragon
-	echo Great people:
-	echo My Brain
-	echo Voices in my head
-	echo My dear girlfriend
+	echo Огромное спасибо за вашу поддержку!
+	echo Гл.Программист: LonelyDragon
+	echo Хорошие люди:
+	echo Мой мозг
+	echo Голоса в моей голове
+	echo Моя шиза
 	pause 
 	goto Menu
 
 :Start1
 cls
-	echo Hello, Gamer
+	echo Добрый день, Игрок
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo -What the hell is this?
+	echo -Что это за хуйня?
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo My name is Entony and I will be your assistant in the "System"
+	echo Меня зовут Энтони и я буду вашим помощником в "Системе"
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo -The fuck is this?
+	echo -Ну-ка постарайся объяснить мне, что это за дичь?
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo You want to know about the "System"?
+	echo Вы хотите узнать побольше о "Системе"?
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo -Oh, come on, do you need my approvement?
+	echo -Боже мой, тебе моё согласие надо? Тут и без этого всё понятно.
 	pause
 
 :InfoChoice
 cls
-	echo 1. -What is the system
+	echo 1. -Что за хуйня эта ваша система?
 	ping -n 1 -w 100 192.168.254.254 >nul
-	echo 2. -Who are you?
+	echo 2. -Ты кто нахрен такой?
 	ping -n 1 -w 100 192.168.254.254 >nul
-	echo 3. -Who am i?
+	echo 3. -Кто я, мать твою?
 	ping -n 1 -w 100 192.168.254.254 >nul
-	echo 4. -What the fuck is this shit?
+	echo 4. -Что за хуйня тут происходит?
 	ping -n 1 -w 100 192.168.254.254 >nul
-	echo 5. -Let's go further	
+	echo 5. -Давай продолжим	
 	ping -n 1 -w 100 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Info1
@@ -473,7 +486,7 @@ cls
 	pause
 	goto Menu
 
-:Exit
+:Start3
 cls
 	echo Thanks for playing!
 	pause
