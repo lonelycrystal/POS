@@ -50,7 +50,7 @@ cls
 	if %answer%==1 goto Start1
 	if %answer%==2 goto Start2
 	if %answer%==3 goto Start3
-	if %answer%==0 (goto Stage_WG) else (goto Menu)
+	if %answer%==0 (goto Stage_4Mom) else (goto Menu)
 
 
 :Start2
@@ -275,17 +275,17 @@ cls
 
 :Stage_4
 cls
-	echo *КАКОГО ХУЯ ТУТ ОБЕЗЬЯНА С ТАРЕЛКАМИ?*
+	echo -КАКОГО ХУЯ ТУТ ОБЕЗЬЯНА С ТАРЕЛКАМИ?
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo You have no more bullets under your feet
+	echo -Блять, камни закончились
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo What are you gonna do?
+	echo ЕБЛАН ТУПОРЫЛЫЙ, ПАТРОНЫ ЭКОНОМИТЬ НАДО!
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 1. Go for her with Bare hands 
+	echo 1. -Похуй, на кулаках пойду
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 2. IT'S DANCE TIME! Go on with Jaga-Jaga
+	echo 2. -Время встряхнуть косточками
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 3. Call for your mom
+	echo 3. *Время позвонить маме*	
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Stage_4ZaHando
@@ -300,17 +300,17 @@ cls
 :Stage_4Mom
 cls 
 	echo ... 
-	call soundplay.bat "phone.mp3" 0
+	call soundplay.bat "phone.mp3" -1000
 	ping -n 1 -w 300 192.168.254.254 >nul
 	echo ...
-	call soundplay.bat "phone.mp3" 0
+	call soundplay.bat "phone.mp3" -1000
 	ping -n 1 -w 300 192.168.254.254 >nul
 	echo ...
-	call soundplay.bat "phone.mp3" 0
+	call soundplay.bat "phone.mp3" -1000
 	ping -n 1 -w 300 192.168.254.254 >nul
-	echo Seems like there will be no answer...
+	echo -Видимо, ответа я не дождусь...
 	ping -n 1 -w 3000 192.168.254.254 >nul
-	echo Goodbye cruel world...
+	echo -Прощай, жестокий мир...
 	ping -n 1 -w 2000 192.168.254.254 >nul	
 	pause
 	goto Death5
@@ -319,11 +319,11 @@ cls
 
 :Stage_4Jaga
 cls
-	echo You choose dance battle, huh
+	echo ЗНАЧИТ, РЕШИЛ ПОДАТЬСЯ В ТАНЦЫ, ДА?
 	call soundplay.bat "g.wav" 0
-	echo -Not a bad music, isn't it?
+	echo -Ничо такой бит
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo Choose row of arrows(they represent your dance moves)
+	echo -Видимо, необходимо выбрать ряд стрелочек, чтобы двигаться
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo Choose one answer:
 	ping -n 1 -w 1000 192.168.254.254 >nul
@@ -341,27 +341,27 @@ cls
 
 :Stage_4ZaHando
 cls
-	echo You found that you have STANDO PAWAH
+	echo *НИХУЯ, У МЕНЯ ЧТО, ЕСТЬ СТЕНД???*
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo ZA HANDO GA KESU!
 	call soundplay.bat "c.mp3" 0
-	echo You erased monkey with your power
+	echo -Стер эту хуиту одним взмахом руки
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo What are you gonna do next?
+	echo <Что ты собираешься делать дальше?>
 	ping -n 1 -w 3500 192.168.254.254 >nul
-	echo Come on, nobody wants something else here
+	echo <Хэй, тут больше ничего нет>
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo So, it's happy end
+	echo <Это хэппи-энд, которого ты желал>
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo You have escaped, got your Stand. Saved your gir....
+	echo <Ты выбрался, получил силу СТЕНДА, спас свою де...>
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo Sorry, wrong script
+	echo <Прошу прощения, не тот сценарий>
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo You come back to your gray life
+	echo <Возвращайся к своей серой жизни>
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo Goodbye, gamer
+	echo <Прощай, Игрок>
 	ping -n 1 -w 5000 192.168.254.254 >nul
-	echo good ending 1/%gendings%
+	echo Хорошая концовка 1/%gendings%
 	call soundplay.bat "d.mp3" 0
 	pause
 	goto Menu
@@ -372,13 +372,13 @@ cls
 
 :Meme_1
 cls
-	echo You stupid bastard
-	echo Your shit is to soft for throwing
-	echo Your shit has no effect on your enemies
+	echo ТЫ ТУПОЙ ЕБЛАН
+	echo ТВОЕ ДЕРЬМО МЯГЧЕ ВОДЫ
+	echo ОНО НЕ БУДЕТ ИМЕТЬ ЭФФЕКТА ПРОТИВ ВРАГОВ
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 1. Die like a meme guy
+	echo 1. -Умру как чел из мемов
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 2. Try another way to throw shit
+	echo 2. -Похуй, попробую по-другому использовать свое дерьмо
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto DeathMeme
@@ -387,19 +387,19 @@ cls
 
 :NoGod
 cls
-	echo There is no god in this world
-	echo So please die peacifully
+	echo <Нет бога в этом мире>
+	echo <Будьте покойны>
 	pause 
 	goto Death4
 
 :DeathMeme
 cls
 	call soundplay.bat "e.wav" 0
-	echo You died like a hero
-	echo like Jotaro Kujo
-	echo or like Football ball
+	echo <Ты умер как герой>
+	echo <Как Джотаро Куджо>
+	echo <Или как Футбольный Мячик>
 	ping -n 1 -w 3000 192.168.254.254 >nul
-	echo or like Captain ZALUPA
+	echo <Или как капитан Залупа, в конце концов>
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Bad ending 5/%bendings%
 	pause
@@ -407,33 +407,31 @@ cls
 	
 :DeathMeme2
 cls
-	echo You have tried to throw shit like spider throws his webs (out of your ass)
-	echo Somehow you have killed remaining part of enemies, but...
+	echo *Попробую стралять дерьмом, как пауки стреляют паутиной(Из задницы)*
+	echo <Каким-то образом Ты смог убить оставшуюся часть врагов, но...>
 	call soundplay.bat "e.wav" 0
 	ping -n 1 -w 3000 192.168.254.254 >nul 
-	echo You have died because of diarea. R.I.P
+	echo Ты умер от диареи. R.I.P
 	ping -n 1 -w 3000 192.168.254.254 >nul 
-	echo Bad ending 6/%bendings%
+	echo Плохая концовка 6/%bendings%
 	pause
 	goto Menu
 
 :Death1
 cls
 	call soundplay.bat "e.wav" 0
-	echo You Died
-	echo Stupid American cheeseburger
+	echo Потрачено
 	ping -n 1 -w 3000 192.168.254.254 >nul
-	echo Bad ending 1/%bendings%
+	echo Плохая концовка 1/%bendings%
 	pause
 	goto Menu
 
 :Death2
 cls
 	call soundplay.bat "e.wav" 0
-	echo You Died
-	echo Stupid American Hamburger
+	echo Потрачено
 	ping -n 1 -w 3000 192.168.254.254 >nul
-	echo Bad ending 2/%bendings%
+	echo Плохая концовка 2/%bendings%
 	pause
 	goto Menu
 
@@ -442,36 +440,34 @@ cls
 	echo You have grown up!
 	call soundplay.bat "b.mp3" 0
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo BUT YOU ARE DOOMED, CHEATER.
+	echo <КАК БЫ НЕ ТАК, ЧИТЕР>
 	ping -n 1 -w 2000 192.168.254.254 >nul
 cls
 	call soundplay.bat "e.wav" 0
-	echo You Died
-	echo Stupid American burger
+	echo Потрачено
 	ping -n 1 -w 3000 192.168.254.254 >nul
-	echo Bad ending 3/%bendings%
+	echo Плохая концовка 3/%bendings%
 	pause
 	goto Menu
 
 :Death4
 cls
 	call soundplay.bat "e.wav" 0
-	echo You Died
-	echo Stupid American McMuffin
+	echo Потрачено
 	ping -n 1 -w 3000 192.168.254.254 >nul
-	echo Bad ending 4/%bendings%
+	echo Плохая концовка 4/%bendings%
 	pause
 	goto Menu
 
 :Death5
 cls
 
-	echo Do you have last words?
+	echo Есть последние слова?
 	ping -n 1 -w 5000 192.168.254.254 >nul	
 	echo Seems legit.
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	call soundplay.bat "e.wav" 0
-	echo You Died
+	echo Потрачено
 	ping -n 1 -w 4000 192.168.254.254 >nul
 	echo Bad ending 7/%bendings%
 	pause
