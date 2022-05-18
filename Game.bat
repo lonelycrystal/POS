@@ -50,7 +50,7 @@ cls
 	if %answer%==1 goto Start1
 	if %answer%==2 goto Start2
 	if %answer%==3 goto Start3
-	if %answer%==0 (goto Stage_4Mom) else (goto Menu)
+	if %answer%==0 (goto Stage_1) else (goto Menu)
 
 
 :Start2
@@ -347,19 +347,19 @@ cls
 	call soundplay.bat "c.mp3" 0
 	echo -Стер эту хуиту одним взмахом руки
 	ping -n 1 -w 1000 192.168.254.254 >nul
-	echo <Что ты собираешься делать дальше?>
+	echo /Что ты собираешься делать дальше?/
 	ping -n 1 -w 3500 192.168.254.254 >nul
-	echo <Хэй, тут больше ничего нет>
+	echo /Хэй, тут больше ничего нет/
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo <Это хэппи-энд, которого ты желал>
+	echo /Это хэппи-энд, которого ты желал/
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo <Ты выбрался, получил силу СТЕНДА, спас свою де...>
+	echo /Ты выбрался, получил силу СТЕНДА, спас свою де.../
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo <Прошу прощения, не тот сценарий>
+	echo /Прошу прощения, не тот сценарий/
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo <Возвращайся к своей серой жизни>
+	echo /Возвращайся к своей серой жизни/
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo <Прощай, Игрок>
+	echo /Прощай, Игрок/
 	ping -n 1 -w 5000 192.168.254.254 >nul
 	echo Хорошая концовка 1/%gendings%
 	call soundplay.bat "d.mp3" 0
@@ -369,6 +369,64 @@ cls
 
 
 
+:Death1
+cls
+	echo /Ты попытался зарезать всех ножом/
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo /Поначалу всё шло хорошо, первые враги уже откисали на полу, но.../
+	ping -n 1 -w 3000 192.168.254.254 >nul
+	call soundplay.bat "e.wav" 0
+	echo ПОТРАЧЕНО
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo /Врагов оказалось слишком много, да и у некоторых оказались пушки/
+	ping -n 1 -w 3000 192.168.254.254 >nul
+	echo Плохая концовка 1/%bendings%
+	call soundplay.bat "d.mp3" 0
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo 1. Продолжить 
+	echo 2. В меню
+	set /p answer=Choose one :
+	if %answer%==1 goto Stage_WG
+	if %answer%==2 (goto Menu) else (goto Death1)
+
+:Death2
+cls
+	echo /Взяв катану в руки, ты почувствовал глубоко внутри себя силу хроноса/
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	pause
+	cls
+	echo /Выждав нужный момент, ты начинаешь очищать мир от очередных ублюдков/
+	call soundplay.bat "kkz.mp3" 0
+	ping -n 1 -w 3000 192.168.254.254 >nul
+	call soundplay.bat "dktnz.mp3" 0
+	cls
+	echo /К сожалению, ты не Гамма-НУЛЬ, навыков тебе нехватает, так что ты смог убить только четверть врагов/
+	echo.
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo /Покойся с миром, Альфа-НУЛЬ/
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	cls
+	echo ---ПОПЫТКА ПЕРЕМОТКИ ДО КОНТРОЛЬНОЙ ТОЧКИ---
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo .
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo .
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo .
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo ---НЕДОСТАТОЧНЙ УРОВЕНЬ ХРОНОСА---
+	ping -n 1 -w 1000 192.168.254.254 >nul
+	echo ---ПЕРЕМОТКА НЕВОЗМОЖНА---
+	ping -n 1 -w 5000 192.168.254.254 >nul
+	cls
+	echo Плохая концовка 2/%bendings%
+	call soundplay.bat "d.mp3" 0
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo 1. Продолжить 
+	echo 2. В меню
+	set /p answer=Choose one :
+	if %answer%==1 goto Stage_WG
+	if %answer%==2 (goto Menu) else (goto Death2)
 
 :Meme_1
 cls
@@ -387,19 +445,19 @@ cls
 
 :NoGod
 cls
-	echo <Нет бога в этом мире>
-	echo <Будьте покойны>
+	echo /Нет бога в этом мире/
+	echo /Будьте покойны/
 	pause 
 	goto Death4
 
 :DeathMeme
 cls
 	call soundplay.bat "e.wav" 0
-	echo <Ты умер как герой>
-	echo <Как Джотаро Куджо>
-	echo <Или как Футбольный Мячик>
+	echo /Ты умер как герой/
+	echo /Как Джотаро Куджо/
+	echo /Или как Футбольный Мячик/
 	ping -n 1 -w 3000 192.168.254.254 >nul
-	echo <Или как капитан Залупа, в конце концов>
+	echo /Или как капитан Залупа, в конце концов/
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Bad ending 5/%bendings%
 	pause
@@ -408,7 +466,7 @@ cls
 :DeathMeme2
 cls
 	echo *Попробую стралять дерьмом, как пауки стреляют паутиной(Из задницы)*
-	echo <Каким-то образом Ты смог убить оставшуюся часть врагов, но...>
+	echo /Каким-то образом Ты смог убить оставшуюся часть врагов, но.../
 	call soundplay.bat "e.wav" 0
 	ping -n 1 -w 3000 192.168.254.254 >nul 
 	echo Ты умер от диареи. R.I.P
@@ -417,30 +475,16 @@ cls
 	pause
 	goto Menu
 
-:Death1
-cls
-	call soundplay.bat "e.wav" 0
-	echo Потрачено
-	ping -n 1 -w 3000 192.168.254.254 >nul
-	echo Плохая концовка 1/%bendings%
-	pause
-	goto Menu
 
-:Death2
-cls
-	call soundplay.bat "e.wav" 0
-	echo Потрачено
-	ping -n 1 -w 3000 192.168.254.254 >nul
-	echo Плохая концовка 2/%bendings%
-	pause
-	goto Menu
+
+
 
 :Death3
 cls
 	echo You have grown up!
 	call soundplay.bat "b.mp3" 0
 	ping -n 1 -w 2000 192.168.254.254 >nul
-	echo <КАК БЫ НЕ ТАК, ЧИТЕР>
+	echo /КАК БЫ НЕ ТАК, ЧИТЕР/
 	ping -n 1 -w 2000 192.168.254.254 >nul
 cls
 	call soundplay.bat "e.wav" 0
@@ -469,7 +513,7 @@ cls
 	call soundplay.bat "e.wav" 0
 	echo Потрачено
 	ping -n 1 -w 4000 192.168.254.254 >nul
-	echo Bad ending 7/%bendings%
+	echo Плохая концовка 7/%bendings%
 	pause
 	goto Menu	
 
@@ -479,7 +523,7 @@ cls
 
 :Beta
 cls
-	echo This storyline isn't ready yet, so try this game one more time. 
+	echo Писатель истории забухал. С похмелья не смог написать годного продолжения. Ждите новых патчей) 
 	pause
 	goto Menu
 
