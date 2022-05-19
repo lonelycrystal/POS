@@ -3,8 +3,12 @@ title [Wierdiest game ever]
 color 0A
 if "%1" neq "" (goto %1)
 set gendings=1
-set bendings=10
+set bendings=11
 :Start
+	echo /Здравствуй, игрок/
+	echo /Для пропуска катсцены напиши 1. Для запуска что угодно/ 
+	set /p answer=Choose one :
+	if %answer%==1 goto Menu
 	dir /s
 	cls
 	ping -n 1 -w 5000 192.168.254.254 >nul
@@ -239,7 +243,7 @@ cls
 	echo 4. -Будем кидать говном как обезьяны
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
-	if %answer%==1 goto Death3
+	if %answer%==1 goto Death5
 	if %answer%==2 goto NoGod
 	if %answer%==3 goto Stage_2
 	if %answer%==4 (goto Meme_1) else (goto Stage_1)
@@ -494,6 +498,30 @@ cls
 	if %answer%==1 goto Stage_WG
 	if %answer%==2 (goto Menu) else (goto Death4)
 	
+:Death5
+cls
+	echo /На самом деле, я не думал что кто-то додумается использовать пальцы в качестве патронов, ну да ладно/
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo /Впрочем, можно и попробовать/
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo /У тебя будет 9 попыток для убийства всех. Попробуй прострелом/
+	echo .
+	call soundplay.bat "shot.wav" 0	
+	echo /Дааааа, с точностью у тебя не самым лучшим образом.../
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo /Напишу у тебя на могиле "Умер от высокого пинга"/
+	pause
+	cls
+	call soundplay.bat "e.wav" 0
+	echo ПОТРАЧЕНО
+	ping -n 1 -w 3000 192.168.254.254 >nul
+	echo Плохая концовка 11/%bendings%
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo 1. Продолжить 
+	echo 2. В меню
+	set /p answer=Choose one :
+	if %answer%==1 goto Stage_1
+	if %answer%==2 (goto Menu) else (goto Death5)
 	
 :Death3_1
 cls.
