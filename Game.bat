@@ -3,7 +3,7 @@ title [Wierdiest game ever]
 color 0A
 if "%1" neq "" (goto %1)
 set gendings=1
-set bendings=7
+set bendings=10
 :Start
 	dir /s
 	cls
@@ -230,13 +230,13 @@ cls
 	echo *Блять, а патроны?*
 	echo ИЩИ ПАТРОНЫ САМ, В КОМПЛЕКТЕ ОНИ НЕ ИДУТ!
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 1. Используй пальцы
+	echo 1. -Используем пальцы
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 2. С богом!
+	echo 2. -ОТЧЕ НАШ
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 3. Используй камни как пули
+	echo 3. -Используем камни как пули
 	ping -n 1 -w 500 192.168.254.254 >nul
-	echo 4. Будем кидать говном как обезьяны
+	echo 4. -Будем кидать говном как обезьяны
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Death3
@@ -268,7 +268,7 @@ cls
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
 	if %answer%==1 goto Stage_4
-	if %answer%==2 goto Death2
+	if %answer%==2 goto Death3_1
 	if %answer%==3 (goto DeathCH) else (goto Stage_3)
 
 
@@ -363,8 +363,11 @@ cls
 	ping -n 1 -w 5000 192.168.254.254 >nul
 	echo Хорошая концовка 1/%gendings%
 	call soundplay.bat "d.mp3" 0
-	pause
-	goto Menu
+	echo 1. Продолжить 
+	echo 2. В меню
+	set /p answer=Choose one :
+	if %answer%==1 goto Stage_4
+	if %answer%==2 (goto Menu) else (goto Stage_4ZaHando)
 
 
 
@@ -484,8 +487,34 @@ cls
 	echo ПОТРАЧЕНО
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Плохая концовка 4/%bendings%
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo 1. Продолжить 
+	echo 2. В меню
+	set /p answer=Choose one :
+	if %answer%==1 goto Stage_WG
+	if %answer%==2 (goto Menu) else (goto Death4)
+	
+	
+:Death3_1
+cls.
+	echo /Не, ну я думал, что найдутся гении, которые выберут этот вариант/
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo /Хотя и надеялся на лучшее, Игрок/
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo /Тут ты ничего не сделаешь. Враги достигли тебя, убили самой жестокой смертью, изнасиловали кота и всё такое прочее.../
+	ping -n 1 -w 1500 192.168.254.254 >nul
 	pause
-	goto Menu	
+	cls
+	call soundplay.bat "e.wav" 0
+	echo ПОТРАЧЕНО
+	ping -n 1 -w 3000 192.168.254.254 >nul
+	echo Плохая концовка 5/%bendings%
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo 1. Продолжить 
+	echo 2. В меню
+	set /p answer=Choose one :
+	if %answer%==1 goto Stage_WG
+	if %answer%==2 (goto Menu) else (goto Death4)
 	
 :DeathCH
 cls
@@ -496,11 +525,15 @@ cls
 	ping -n 1 -w 2000 192.168.254.254 >nul
 cls
 	call soundplay.bat "e.wav" 0
-	echo Потрачено
+	echo ПОТРАЧЕНО
 	ping -n 1 -w 3000 192.168.254.254 >nul
-	echo Плохая концовка 3/%bendings%
-	pause
-	goto Menu
+	echo Плохая концовка 6/%bendings%
+	ping -n 1 -w 3000 192.168.254.254 >nul
+	echo 1. Продолжить 
+	echo 2. В меню
+	set /p answer=Choose one :
+	if %answer%==1 goto Stage_3
+	if %answer%==2 (goto Menu) else (goto DeathCH)
 
 
 :Meme_1
@@ -520,10 +553,20 @@ cls
 
 :NoGod
 cls
-	echo /Нет бога в этом мире/
+	echo /Нет бога в этом дерьмовом мире/
 	echo /Будьте покойны/
-	pause 
-	goto Beta
+	ping -n 1 -w 500 192.168.254.254 >nul
+	pause
+	cls
+	call soundplay.bat "e.wav" 0
+	echo ПОТРАЧЕНО
+	ping -n 1 -w 3000 192.168.254.254 >nul
+	echo Плохая концовка 10/%bendings%
+	echo 1. Продолжить 
+	echo 2. В меню
+	set /p answer=Choose one :
+	if %answer%==1 goto Stage_1
+	if %answer%==2 (goto Menu) else (goto NoGod)
 
 :DeathMeme
 cls
@@ -534,7 +577,7 @@ cls
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo /Или как капитан Залупа, в конце концов/
 	ping -n 1 -w 3000 192.168.254.254 >nul
-	echo Bad ending 5/%bendings%
+	echo Bad ending 7/%bendings%
 	pause
 	goto Menu
 	
@@ -546,7 +589,7 @@ cls
 	ping -n 1 -w 3000 192.168.254.254 >nul 
 	echo Ты умер от диареи. R.I.P
 	ping -n 1 -w 3000 192.168.254.254 >nul 
-	echo Плохая концовка 6/%bendings%
+	echo Плохая концовка 8/%bendings%
 	pause
 	goto Menu
 
@@ -567,7 +610,7 @@ cls
 	call soundplay.bat "e.wav" 0
 	echo Потрачено
 	ping -n 1 -w 4000 192.168.254.254 >nul
-	echo Плохая концовка 7/%bendings%
+	echo Плохая концовка 9/%bendings%
 	pause
 	goto Menu	
 
