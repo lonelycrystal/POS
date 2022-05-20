@@ -2,7 +2,7 @@
 title [Wierdiest game ever]
 color 0A
 if "%1" neq "" (goto %1)
-set gendings=1
+set gendings=2
 set bendings=11
 :Start
 	echo /Здравствуй, игрок/
@@ -258,10 +258,18 @@ cls
 	ping -n 1 -w 1000 192.168.254.254 >nul 
 	echo *Сука, они приближаются*
 	ping -n 1 -w 5000 192.168.254.254 >nul 
+	echo.
+	pause
 	goto Stage_3
 
 :Stage_3
 cls
+	echo ---НОВАЯ ЛОКАЦИЯ ОБНАРУЖЕНА---
+	ping -n 1 -w 2000 192.168.254.254 >nul
+cls	
+	echo ---Темный переулок---
+	ping -n 1 -w 2000 192.168.254.254 >nul
+cls	
 	echo *Отличное начало хоррора-темный переулок*
 	ping -n 1 -w 500 192.168.254.254 >nul 
 	echo 1. -Похуй, погнали
@@ -317,7 +325,7 @@ cls
 	echo -Прощай, жестокий мир...
 	ping -n 1 -w 2000 192.168.254.254 >nul	
 	pause
-	goto Death5
+	goto Death6
 
 
 
@@ -373,6 +381,64 @@ cls
 	if %answer%==1 goto Stage_4
 	if %answer%==2 (goto Menu) else (goto Stage_4ZaHando)
 
+
+:Stage_4JEnd
+cls
+	echo А ты неплохо двигаешься, салага
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo -Не имею понятия, как это работает, но кажется, что я занимался бальными танцами более 10 лет
+	ping -n 1 -w 3000 192.168.254.254 >nul
+	echo /Ты показал впечатляющий результат долгих тренировок/
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo /Хоть ты и не помнишь, кто ты такой, как ты тут очутился, но.../
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo /Мышечная память никогда не подводит/
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo.
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo.
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo.
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo /Делая очередное движение, ты случайно снёс голову обезьяне/
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo -Блять, а нахуя я ей бошку то снёс?
+	echo -Это же просто игрушка
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo -И ПОЧЕМУ ТЫ МЕНЯ НЕ ОСТАНОВИЛ?
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo За тобой было так увлекательно наблюдать, так что я подумал, что так будет интереснее)))
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo -Вот же сукин сын...
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo -А, это самое, где враги то? За мной вроде гналась парочка десятков, или сколько их там было
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo На самом деле они увидели твой НЕОТРАЗИМЫЙ танец и благополучно съебались
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo -Вот сскуны. Я б их одной левой уложил.
+	ping -n 1 -w 2000 192.168.254.254 >nul
+	echo -Что делать дальше будем?
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo Я считаю, что больше тебе не нужны воспоминания. Такой ты больше подходишь современному обществу.
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo Начни жизнь с чистого листа, так будет лучше
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo -Сомневаюсь, что это лучший вариант, но не хотелось бы больше иметь дел с тобой)
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo -До связи, Энтони.
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo Но не половой...
+	ping -n 1 -w 1500 192.168.254.254 >nul
+	echo -Вот же ссука...)
+	ping -n 1 -w 5000 192.168.254.254 >nul
+cls
+	echo Хорошая концовка 2/%gendings%
+	call soundplay.bat "d.mp3" 0
+	echo 1. Продолжить 
+	echo 2. В меню
+	set /p answer=Choose one :
+	if %answer%==1 goto Stage_4
+	if %answer%==2 (goto Menu) else (goto Stage_4ZaHando)
 
 
 
@@ -563,6 +629,26 @@ cls
 	if %answer%==1 goto Stage_3
 	if %answer%==2 (goto Menu) else (goto DeathCH)
 
+:Death6
+cls
+	echo Есть последние слова?
+	ping -n 1 -w 5000 192.168.254.254 >nul	
+	echo Seems legit.
+	ping -n 1 -w 3000 192.168.254.254 >nul
+cls
+	call soundplay.bat "e.wav" 0
+	echo ПОТРАЧЕНО
+	ping -n 1 -w 4000 192.168.254.254 >nul
+	echo Плохая концовка 9/%bendings%
+	ping -n 1 -w 3000 192.168.254.254 >nul
+	echo 1. Продолжить 
+	echo 2. В меню
+	set /p answer=Choose one :
+	if %answer%==1 goto Stage_4
+	if %answer%==2 (goto Menu) else (goto Death6)
+
+
+
 
 :Meme_1
 cls
@@ -625,22 +711,6 @@ cls
 
 
 
-
-
-
-:Death5
-cls
-
-	echo Есть последние слова?
-	ping -n 1 -w 5000 192.168.254.254 >nul	
-	echo Seems legit.
-	ping -n 1 -w 1000 192.168.254.254 >nul
-	call soundplay.bat "e.wav" 0
-	echo Потрачено
-	ping -n 1 -w 4000 192.168.254.254 >nul
-	echo Плохая концовка 9/%bendings%
-	pause
-	goto Menu	
 
 
 
