@@ -343,9 +343,9 @@ cls
 	echo 2. up, down, right, left
 	echo 3. down, right, up, left
 	set /p answer=Choose one :
-	if %answer%==1 goto Beta
-	if %answer%==2 goto Beta
-	if %answer%==3 (goto Beta) else (goto Stage_4Jaga)
+	if %answer%==1 goto Stage_4JEnd
+	if %answer%==2 goto Stage_4JEnd
+	if %answer%==3 (goto Stage_4JEnd) else (goto Stage_4Jaga)
 
 
 
