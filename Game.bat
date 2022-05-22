@@ -14,7 +14,7 @@ set gmemo=1
 	cls
 	ping -n 1 -w 5000 192.168.254.254 >nul
 	echo W╨▓╨░╨┐ke u▓╨┐p, Ne╨░...
-	call soundplay.bat "mtrx.mp3" 0
+	call soundplay.bat "Sounds/mtrx.mp3" 0
 	cls
 	echo Wake up, Neo...
 	ping -n 1 -w 5000 192.168.254.254 >nul
@@ -68,6 +68,10 @@ cls
 	echo Мой мозг
 	echo Голоса в моей голове
 	echo Моя шиза
+	echo Моя команда Бета-Тестеров
+	echo.
+	echo Отдельный человеческий сенкью этим ребятам:
+	echo Кирюша, Владимир Иванович, Пидорасик мой(DaddyDreamfall), Данечка
 	pause 
 	goto Menu
 
@@ -177,7 +181,7 @@ cls
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo .
 	ping -n 1 -w 1500 192.168.254.254 >nul
-	call soundplay.bat "Error.wav" 0
+	call soundplay.bat "Sounds/Error.wav" 0
 	echo ---ОШИБКА ПЕРЕМЕЩЕНИЯ---
 	ping -n 1 -w 500 192.168.254.254 >nul
 	echo -И ЧТО ЭТО БЛЯТЬ ЗА ХЕРНЯ?
@@ -188,7 +192,7 @@ cls
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	pause
 cls
-	call soundplay.bat "Error.wav" 0
+	call soundplay.bat "Sounds/Error.wav" 0
 	echo ---ОШИБКА ГОЛОСОВОГО МОДУЛЯ---
 	ping -n 1 -w 500 192.168.254.254 >nul
 	echo -Что за хуйня с этим местом?
@@ -222,13 +226,136 @@ cls
 	echo 3. -Ножницы!
 	ping -n 1 -w 500 192.168.254.254 >nul
 	set /p answer=Choose one :
-	if %answer%==1 goto Stage_WG
-	if %answer%==2 goto Stage_WG
-	if %answer%==3 (goto Stage_WG) else (goto Start1)
+	if %answer%==1 goto Rock
+	if %answer%==2 goto Paper
+	if %answer%==3 (goto Scis) else (goto Start1)
+
+:Rock
+cls
+	echo /Игрок, не хочешь добавить немного рандома?/
+	echo 1. -Не, я больше по сюжету
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo 2. -Похуй пляшем
+	ping -n 1 -w 500 192.168.254.254 >nul
+	set /p answer=Choose one :
+	if %answer%==1 (goto Stage_WG) 
+	if %answer%==2 (goto Rock2) else (goto Rock)
+:Rock2
+cls 
+	echo /Вы выбрали камень/
+		set /a RND=3*%random%/32767>NUL
+	if %RND%==0 (
+		echo /Ваш враг выбрал бумагу/
+		echo.
+		echo /Вы проиграли!/
+		echo.
+		pause
+		goto Stage_WG
+	)
+	if %RND%==1 (
+		echo /Ваш враг выбрал камень/
+		echo.
+		echo /Ничья!/
+		echo.
+		pause
+		goto Stage_WG
+	)
+	if %RND%==2 (
+		echo /Ваш враг выбрал ножницы/
+		echo.
+		echo /Вы победили!/
+		echo.
+		pause
+		goto Stage_WG
+	) else (goto Rock2)	
+
+	
+:Paper
+cls
+	echo /Игрок, не хочешь добавить немного рандома?/
+	echo 1. -Не, я больше по сюжету
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo 2. -Похуй пляшем
+	ping -n 1 -w 500 192.168.254.254 >nul
+	set /p answer=Choose one :
+	if %answer%==1 (goto Stage_WG) 
+	if %answer%==2 (goto Paper2) else (goto Paper)
+:Paper2
+cls 
+	echo /Вы выбрали бумагу/
+		set /a RND=3*%random%/32767>NUL
+		if %RND%==0 (
+		echo /Ваш враг выбрал бумагу/
+		echo.
+		echo /Ничья!/
+		echo.
+		pause
+		goto Stage_WG
+		)
+		if %RND%==1 (
+		echo /Ваш враг выбрал камень/
+		echo.
+		echo /Вы выйграли!/
+		echo.
+		pause
+		goto Stage_WG
+		)
+		if %RND%==2 (
+		echo /Ваш враг выбрал ножницы/
+		echo.
+		echo /Вы проиграли!/
+		echo.
+		pause
+		goto Stage_WG
+		) else (goto Paper2)	
+
+	
+:Scis
+cls
+	echo /Игрок, не хочешь добавить немного рандома?/
+	echo 1. -Не, я больше по сюжету
+	ping -n 1 -w 500 192.168.254.254 >nul
+	echo 2. -Похуй пляшем
+	ping -n 1 -w 500 192.168.254.254 >nul
+	set /p answer=Choose one :
+	if %answer%==1 (goto Stage_WG) 
+	if %answer%==2 (goto Scis2) else (goto Scis)
+:Scis2
+cls 
+	echo /Вы выбрали ножницы/
+		set /a RND=3*%random%/32767>NUL
+		if %RND%==0 (
+		echo /Ваш враг выбрал бумагу/
+		echo.
+		echo /Победа!/
+		echo.
+		pause
+		goto Stage_WG
+		)
+		if %RND%==1 (
+		echo /Ваш враг выбрал камень/
+		echo.
+		echo /Вы проиграли!/
+		echo.
+		pause
+		goto Stage_WG
+		)
+		if %RND%==2 (
+		echo /Ваш враг выбрал ножницы/
+		echo.
+		echo /Ничья!/
+		echo.
+		pause
+		goto Stage_WG
+		) else (goto Scis2)	
+
+
+
+
 
 :Stage_WG
 cls
-	echo Ты решил в эту игру поиграть?
+	echo Ты блять решил в эту игру поиграть со своими врагами?
 	ping -n 1 -w 500 192.168.254.254 >nul
 	echo -Чувак, может будешь менее агрессивным?
 	ping -n 1 -w 500 192.168.254.254 >nul
@@ -276,7 +403,7 @@ cls
 :Stage_2
 cls
 	echo РАТАТАТАТАТАТАТАТАТАТАТАТАТАТАТАТАТА
-	call soundplay.bat "gun.mp3" 0
+	call soundplay.bat "Sounds/gun.mp3" 0
 	echo *Неплохо, большая часть полегла*
 	ping -n 1 -w 1000 192.168.254.254 >nul 
 	echo -Блять, камни закончились
@@ -290,7 +417,7 @@ cls
 :Stage_3
 cls
 	echo ---НОВАЯ ЛОКАЦИЯ ОБНАРУЖЕНА---
-	call soundplay.bat "newloc.mp3" 0
+	call soundplay.bat "Sounds/newloc.mp3" 0
 	ping -n 1 -w 4000 192.168.254.254 >nul
 cls	
 	echo ---Темный переулок---
@@ -338,13 +465,13 @@ cls
 :Stage_4Mom
 cls 
 	echo ... 
-	call soundplay.bat "phone.mp3" -1000
+	call soundplay.bat "Sounds/phone.mp3" -1000
 	ping -n 1 -w 300 192.168.254.254 >nul
 	echo ...
-	call soundplay.bat "phone.mp3" -1000
+	call soundplay.bat "Sounds/phone.mp3" -1000
 	ping -n 1 -w 300 192.168.254.254 >nul
 	echo ...
-	call soundplay.bat "phone.mp3" -1000
+	call soundplay.bat "Sounds/phone.mp3" -1000
 	ping -n 1 -w 300 192.168.254.254 >nul
 	echo -Видимо, ответа я не дождусь...
 	ping -n 1 -w 3000 192.168.254.254 >nul
@@ -358,7 +485,7 @@ cls
 :Stage_4Jaga
 cls
 	echo ЗНАЧИТ, РЕШИЛ ПОДАТЬСЯ В ТАНЦЫ, ДА?
-	call soundplay.bat "g.wav" 0
+	call soundplay.bat "Sounds/g.wav" 0
 	echo -Ничо такой бит
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo -Видимо, необходимо выбрать ряд стрелочек, чтобы двигаться
@@ -382,7 +509,7 @@ cls
 	echo *НИХУЯ, У МЕНЯ ЧТО, ЕСТЬ СТЕНД???*
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo ZA HANDO GA KESU!
-	call soundplay.bat "c.mp3" 0
+	call soundplay.bat "Sounds/c.mp3" 0
 	echo -Стер эту хуиту одним взмахом руки
 	ping -n 1 -w 1000 192.168.254.254 >nul
 	echo /Что ты собираешься делать дальше?/
@@ -400,7 +527,7 @@ cls
 	echo /Прощай, Игрок/
 	ping -n 1 -w 5000 192.168.254.254 >nul
 	echo Хорошая концовка 1/%gendings%
-	call soundplay.bat "d.mp3" 0
+	call soundplay.bat "Sounds/d.mp3" 0
 	echo 1. Продолжить 
 	echo 2. В меню
 	set /p answer=Choose one :
@@ -415,7 +542,7 @@ cls
 	echo -Не имею понятия, как это работает, но кажется, что я занимался бальными танцами более 10 лет
 	ping -n 1 -w 2500 192.168.254.254 >nul
 	echo ---НОВАЯ ЯЧЕЙКА ПАМЯТИ ОТКРЫТА---
-	call soundplay.bat "newloc.mp3" 0
+	call soundplay.bat "Sounds/newloc.mp3" 0
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo *Что ещё за ячейка памяти?*
 	ping -n 1 -w 1500 192.168.254.254 >nul
@@ -467,13 +594,13 @@ cls
 	ping -n 1 -w 5000 192.168.254.254 >nul
 cls
 	echo Хорошая концовка 2/%gendings%
-	call soundplay.bat "d.mp3" 0
+	call soundplay.bat "Sounds/d.mp3" 0
 	echo 1. Продолжить 
 	echo 2. В меню
 	echo Choose one :
 	ping -n 1 -w 5000 192.168.254.254 >nul
 cls	
-	call soundplay.bat "note.mp3" 0
+	call soundplay.bat "Sounds/note.mp3" 0
 	echo *Что за чертовщина? Я думал, что избавился от "Системы"*
 	ping -n 1 -w 2000 192.168.254.254 >nul
 	echo -...
@@ -484,7 +611,7 @@ cls
 	pause
 cls	
 	color 0C
-	call soundplay.bat "error2.wav" 0
+	call soundplay.bat "Sounds/error2.wav" 0
 	echo Ты ╨▓╨░╨┐, ч▓╨┐ ╨░ тебя ╨▓о╨░╨ от▓╨░╨?
 	ping -n 1 -w 700 192.168.254.254 >nul
 cls
@@ -562,7 +689,7 @@ cls
 	ping -n 1 -w 1500 192.168.254.254 >nul
 cls
 	echo ---ОТКРЫТА НОВАЯ ЛОКАЦИЯ---
-	call soundplay.bat "newloc.mp3" 0
+	call soundplay.bat "Sounds/newloc.mp3" 0
 	ping -n 1 -w 4000 192.168.254.254 >nul
 cls
 	echo ---Маниград---
@@ -585,13 +712,13 @@ cls
 	echo.
 pause	
 cls
-	call soundplay.bat "e.wav" 0
+	call soundplay.bat "Sounds/e.wav" 0
 	echo ПОТРАЧЕНО
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo /Врагов оказалось слишком много, да и у некоторых оказались пушки/
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Плохая концовка 1/%bendings%
-	call soundplay.bat "d.mp3" 0
+	call soundplay.bat "Sounds/d.mp3" 0
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo 1. Продолжить 
 	echo 2. В меню
@@ -606,9 +733,9 @@ cls
 	pause
 	cls
 	echo /Выждав нужный момент, ты начинаешь очищать мир от очередных ублюдков/
-	call soundplay.bat "kkz.mp3" 0
+	call soundplay.bat "Sounds/kkz.mp3" 0
 	ping -n 1 -w 3000 192.168.254.254 >nul
-	call soundplay.bat "dktnz.mp3" 0
+	call soundplay.bat "Sounds/dktnz.mp3" 0
 	cls
 	echo /К сожалению, ты не Гамма-НУЛЬ, навыков тебе нехватает, так что ты смог убить только четверть врагов/
 	echo.
@@ -634,7 +761,7 @@ cls
 	pause
 cls
 	echo Плохая концовка 2/%bendings%
-	call soundplay.bat "d.mp3" 0
+	call soundplay.bat "Sounds/d.mp3" 0
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo 1. Продолжить 
 	echo 2. В меню
@@ -656,17 +783,17 @@ cls
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo . 
 	ping -n 1 -w 3000 192.168.254.254 >nul
-	call soundplay.bat "f.wav" 0
+	call soundplay.bat "Sounds/f.wav" 0
 	echo /Внезапно тебе на голову упал горшок/
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo /Ты умер от кринжанутости ситуации/
 	ping -n 1 -w 5000 192.168.254.254 >nul
 	cls
-	call soundplay.bat "e.wav" 0
+	call soundplay.bat "Sounds/e.wav" 0
 	echo ПОТРАЧЕНО
 	ping -n 1 -w 4000 192.168.254.254 >nul
 	echo Плохая концовка 3/%bendings%
-	call soundplay.bat "d.mp3" 0
+	call soundplay.bat "Sounds/d.mp3" 0
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo 1. Продолжить 
 	echo 2. В меню
@@ -694,7 +821,7 @@ cls
 	ping -n 1 -w 5000 192.168.254.254 >nul
 	pause
 	cls
-	call soundplay.bat "e.wav" 0
+	call soundplay.bat "Sounds/e.wav" 0
 	echo ПОТРАЧЕНО
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Плохая концовка 4/%bendings%
@@ -713,13 +840,13 @@ cls
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo /У тебя будет 9 попыток для убийства всех. Попробуй прострелом/
 	echo .
-	call soundplay.bat "shot.wav" 0	
+	call soundplay.bat "Sounds/shot.wav" 0	
 	echo /Дааааа, с точностью у тебя не самым лучшим образом.../
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	echo /Напишу у тебя на могиле "Умер от высокого пинга"/
 	pause
 	cls
-	call soundplay.bat "e.wav" 0
+	call soundplay.bat "Sounds/e.wav" 0
 	echo ПОТРАЧЕНО
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Плохая концовка 11/%bendings%
@@ -740,7 +867,7 @@ cls.
 	ping -n 1 -w 1500 192.168.254.254 >nul
 	pause
 	cls
-	call soundplay.bat "e.wav" 0
+	call soundplay.bat "Sounds/e.wav" 0
 	echo ПОТРАЧЕНО
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Плохая концовка 5/%bendings%
@@ -754,12 +881,12 @@ cls.
 :DeathCH
 cls
 	echo You have grown up!
-	call soundplay.bat "b.mp3" 0
+	call soundplay.bat "Sounds/b.mp3" 0
 	ping -n 1 -w 2000 192.168.254.254 >nul
 	echo /КАК БЫ НЕ ТАК, ЧИТЕР/
 	ping -n 1 -w 2000 192.168.254.254 >nul
 cls
-	call soundplay.bat "e.wav" 0
+	call soundplay.bat "Sounds/e.wav" 0
 	echo ПОТРАЧЕНО
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Плохая концовка 6/%bendings%
@@ -777,7 +904,7 @@ cls
 	echo Seems legit.
 	ping -n 1 -w 3000 192.168.254.254 >nul
 cls
-	call soundplay.bat "e.wav" 0
+	call soundplay.bat "Sounds/e.wav" 0
 	echo ПОТРАЧЕНО
 	ping -n 1 -w 4000 192.168.254.254 >nul
 	echo Плохая концовка 9/%bendings%
@@ -813,7 +940,7 @@ cls
 	ping -n 1 -w 500 192.168.254.254 >nul
 	pause
 	cls
-	call soundplay.bat "e.wav" 0
+	call soundplay.bat "Sounds/e.wav" 0
 	echo ПОТРАЧЕНО
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	echo Плохая концовка 10/%bendings%
@@ -833,7 +960,7 @@ cls
 	ping -n 1 -w 3000 192.168.254.254 >nul
 	pause
 cls
-	call soundplay.bat "e.wav" 0
+	call soundplay.bat "Sounds/e.wav" 0
 	echo ПОТРАЧЕНО
 	echo.
 	ping -n 1 -w 3000 192.168.254.254 >nul
@@ -853,7 +980,7 @@ cls
 	echo Ты умер от диареи. R.I.P
 	ping -n 1 -w 3000 192.168.254.254 >nul 
 cls
-	call soundplay.bat "e.wav" 0
+	call soundplay.bat "Sounds/e.wav" 0
 	echo ПОТРАЧЕНО
 	echo.
 	ping -n 1 -w 3000 192.168.254.254 >nul
