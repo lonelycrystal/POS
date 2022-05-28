@@ -93,9 +93,15 @@ cls
 	echo 8. Серый
 	ping -n 1 -w 300 192.168.254.254 >nul
 	echo.
+	:color_set_repeat
 	set /p col1=Выбери цвет фона:
 	set /p col2=Выбери цвет текста:
-	color %col1%%col2%
+	color %col1%%col2% > colorchk.txt
+	for %%? in (colorchk.txt) do (set /a f_len=%%~z?-2)
+	if %f_len% == -2 (color %col1%%col2%)
+	if %f_len% == 1045 (echo /Неверный формат ввода/)
+	del colorchk.txt
+	goto color_set_repeat
 	
 :colorpi2
 cls
