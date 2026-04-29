@@ -55,13 +55,16 @@ cls
 	ping -n 1 -w 300 192.168.254.254 >nul
 	echo 4. Выход
 	ping -n 1 -w 100 192.168.254.254 >nul
-	echo 5. ReadMe
+	echo 5. Nexus (Сохранения)
+	ping -n 1 -w 100 192.168.254.254 >nul
+	echo 6. ReadMe
 	set /p answer=Choose one :
 	if %answer%==1 goto Start1
 	if %answer%==2 goto Start2
 	if %answer%==3 goto colorpi
 	if %answer%==4 goto Start3
-	if %answer%==5 goto Readme1
+	if %answer%==5 goto Saves
+	if %answer%==6 goto Readme1
 	if %answer%==0 (goto Stage6) else (goto Menu)
 	
 	
@@ -149,16 +152,21 @@ cls
 	echo Создатели
 	echo.
 	echo Огромное спасибо за вашу поддержку!
-	echo Гл.Программист: LonelyDragon
-	echo Хорошие люди:
-	echo Мой мозг
-	echo Голоса в моей голове
-	echo Моя шиза
-	echo Моя команда Бета-Тестеров
-	echo.
-	echo Отдельный человеческий сенкью этим ребятам:
-	echo Кирюша, Владимир Иванович, Пидорасик мой(DaddyDreamfall), Данечка
+	echo Code: HS
+	echo Story: a bit of AI, ADHD support, experience from real life
 	pause 
+	goto Menu
+	
+	
+	
+:Saves
+cls
+	echo Добро пожаловать в Nexus, место для перемещения по главам.
+	echo.
+	echo Чтобы отправиться к сохранению, напишите уникальный адрес главы.
+	echo Уникальный адрес указан в начале каждой сцены/диалога/действия.
+	
+	pause
 	goto Menu
 
 :Start1
