@@ -65,14 +65,51 @@ cls
 	if %answer%==4 goto Start3
 	if %answer%==5 goto Saves
 	if %answer%==6 goto Readme1
+	if %answer%==Debug goto Debug
 	if %answer%==0 (goto Stage6) else (goto Menu)
+	
+	
+	
+	
+:Debug
+cls
+
+	
+	echo SO THIS IS DEBUG Menu
+	echo SOME TIME LATER HERE WILLE BE SAVE POINTS
+	echo 1. TEST SAVES
+	echo 2. Test READ SAVE
+
+	echo Ex. Leave DEBUG
+	set /p answer=Choose one :
+	if %answer%==1 (
+	echo Game Saved! > UserData\Save.txt
+	echo Game Saved!	
+	pause
+	goto Debug
+	)
+	if %answer%==2 (
+	echo Save info: 
+	FOR /F "tokens=1,2 delims ==" %%a IN (UserData\Save.txt) DO (
+	if %%a==savepoint
+	set sv=%%b
+	echo %sv%)
+	pause
+	)
+	if %answer%==Ex (goto Menu) else (goto Debug)
+	
+	 
+	
+	pause
+	goto Debug
+	
 	
 	
 :Readme1
 cls
 echo День добрый, дорогой читатель
-echo Меня зовут Энтони(или LonelyDragon, если интересно)
-echo Я являюсь студентом колледжа и в данный момент работаю над простеньким open-source проектом
+echo Меня зовут HS
+echo Это простенький open-source проект
 echo Суть проекта заключается в создании текстовой игры в блокноте
 echo Не переживайте, в нем нет вирусов. В случае чего, можете проверить сами
 echo Sooo...
